@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Survey Form</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        line-height: 1.1;
+        font-family: sans-serif;
+        color: white;
+        background-color: lightslategray;
+        margin: 0;
+    }
+    
+    div {
+        text-align: center;
+        line-height: 1.6;
+    }
+    
+    label {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        align-items: center;
+        display: flex;
+        margin-bottom: 8px;
+    }
+    
+    input,
+    select,
+    textarea,
+    button {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+    
+    button {
+        border: none;
+    }
+    
+    .container {
+        width: 100%;
+        margin: 50px auto 0 auto;
+    }
+    
+    @media(min-width:576px) {
+        .container {
+            max-width: 540px;
+        }
+    }
+    
+    @media(min-width:768px) {
+        .container {
+            max-width: 720px;
+        }
+    }
+    
+    .header {
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        font-size: 45px;
+        font-family: sans-serif;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+    
+    p {
+        font-size: 20px;
+        font-family: monospace;
+    }
+    
+    h2,
+    p {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    
+    .description {
+        font-weight: 200;
+        font-style: italic;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4)
+    }
+    
+    #survey-form {
+        font-size: 20px;
+        font-style: bold;
+    }
+    
+    #form-group {
+        line-height: 1.1;
+        margin: 0 auto 20px auto;
+        padding: 4px;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    form {
+        background: var(--color-crimson-alpha);
+        padding: 40px 10px;
+        border-radius: 4px;
+    }
+    
+    @media(min-width:480px) {
+        form {
+            padding: 40px;
+        }
+    }
+    
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 38px;
+        padding: 6px 12px;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    
+    .form-control:focus {
+        outline: 0;
+    }
+    
+    .input-radio,
+    .input-checkbox {
+        display: inline-block;
+        margin-right: 10px;
+        min-height: 20px;
+        min-width: 20px;
+    }
+    
+    .input-textarea {
+        min-height: 120px;
+        width: 100%;
+        padding: 10px;
+        resize: vertical;
+    }
+    
+    .submit-button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h2 id="title">Peak Tutorials Survey Form</h2>
+            <p id="description" class="description" text-center>Learning at it's best...</p>
+        </header>
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age</label>
+                <input type="number" name="age" id="number" min="14" max="45" class="form-control" placeholder="Age" />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required />
+            </div>
+            <br/>
+            <div class="form-group">
+                <p>What Faculty are you?</p>
+                <select id="dropdown" name="faculty" class="form-control" required>
+                <option disabled selected value>Select your faculty</option>
+                <option value="Pharmacy">Pharmacy</option>
+                <option value="Agriculture">Agriculture</option>
+                <option value="Health Sciences">Health Sciences</option>
+                <option value="Sciences">Sciences</option>
+                <option value="Technology">Technology</option>
+            </select>
+            </div>
+            <br/>
+            <div class="form-group">
+                <p>Which session will you prefer?</p>
+                <label>
+                <input
+                value="Morning"
+                type="radio"
+                class="input-radio" 
+                name="user-recommend"
+                >
+                Morning
+            </label>
+                <label>
+                <input
+                value="Evening"
+                type="radio"
+                class="input-radio"
+                name="user-recommend"
+                >
+                Afternoon
+            </label>
+            </div>
+            <div class="form-group">
+                <p>What courses do you want to be tutored on?</p>
+                <label>
+                <input
+                name="prefer"
+                value="Mathematics"
+                type="checkbox"
+                class="input-checkbox"
+                />Mathematics
+            </label>
+                <label>
+                <input
+                name="prefer"
+                value="Physics"
+                type="checkbox"
+                class="input-checkbox"
+                />Physics
+            </label>
+                <label>
+                <input
+                name="prefer"
+                value="Chemistry"
+                type="checkbox"
+                class="input-checkbox"
+                />Chemistry
+            </label>
+                <label>
+                <input
+                name="prefer"
+                value="Engineering Drawing"
+                type="checkbox"
+                class="input-checkbox"
+                />Engineering Drawing
+            </label>
+                <label>
+                <input
+                name="prefer"
+                value="Applied Electricity"
+                type="checkbox"
+                class="input-checkbox"
+                />Applied Electricity
+            </label>
+                <label>
+                <input
+                name="prefer"
+                value="Thermodynamics"
+                type="checkbox"
+                class="input-checkbox"
+                />Thermodynamics
+            </label>
+                <label>
+                    <input
+                    name="prefer"
+                    value="Mechanics"
+                    type="checkbox"
+                    class="input-checkbox"
+                    />Mechanics
+                </label>
+                <label>
+                <input
+                name="prefer"
+                value="Botany"
+                type="checkbox"
+                class="input-checkbox"
+                />Botany
+            </label>
+            </div>
+            <div class="form-group">
+                <p>Any comments?</p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comments here...">
+        </textarea>
+            </div>
+            <br/>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
