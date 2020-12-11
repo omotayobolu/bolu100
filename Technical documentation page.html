@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Technical Documentation Page</title>
+    <style>
+        html,
+        body {
+            color: black;
+            background-color: silver;
+            line-height: 1.5;
+            font-family: Arial, Helvetica, sans-serif;
+            min-width: 300px;
+        }
+        
+        #navbar {
+            position: fixed;
+            min-width: 320px;
+            top: 0;
+            left: 0;
+            width: 320px;
+            border-right: solid;
+            border-color: rgba(0, 22, 40, 0.2);
+        }
+        
+        header {
+            color: black;
+            margin: 10px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: thin;
+        }
+        
+        #main-doc header {
+            text-align: left;
+            margin: 0;
+        }
+        
+        #navbar ul {
+            height: 100%;
+            padding: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        
+        #navbar li {
+            color: black;
+            border-top: 1px solid;
+            list-style: none;
+            position: relative;
+            width: 100%;
+        }
+        
+        #navbar a {
+            color: black;
+            padding: 10px 30px;
+            display: block;
+            cursor: pointer;
+        }
+        
+        #main-doc {
+            margin-left: 300px;
+            position: absolute;
+            padding: 20px;
+            margin-bottom: 100px;
+        }
+        
+        section article {
+            color: black;
+            margin: 15px;
+            font-size: 20px;
+        }
+        
+        section li {
+            margin: 15px 0px 0px 20px;
+        }
+        
+        code {
+            display: block;
+            text-align: left;
+            white-space: pre-line;
+            position: relative;
+            line-height: 2;
+            background-color: grey;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 15px;
+            word-wrap: normal;
+        }
+        
+        @media only screen and (max-width:815px) {
+            /*For mobile phones:*/
+            #navbar ul {
+                border: 1px solid;
+                height: 200px;
+            }
+            #navbar {
+                background-color: silver;
+                position: absolute;
+                top: 0;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                max-height: 300px;
+                border: none;
+                z-index: 1;
+                border-bottom: 2px solid;
+            }
+            #main-doc {
+                position: relative;
+                margin-left: 0;
+                margin-top: 300px;
+            }
+        }
+        
+        @media only screen and (max-width:400px) {
+            #main-doc {
+                margin-left: -10px;
+            }
+            code {
+                margin-left: -20px;
+                width: 100%;
+                padding: 15px;
+                padding-left: 10px;
+                padding-right: 45px;
+                min-width: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>Phython Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Overview">Overview</a></li>
+            <li><a class="nav-link" href="#Installing_Python">Installing Python</a></li>
+            <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
+            <li><a class="nav-link" href="#strings">Strings</a></li>
+            <li><a class="nav-link" href="#Handling_Errors">Handling Errors</a></li>
+            <li><a class="nav-link" href="#Variables">Variables</a></li>
+            <li><a class="nav-link" href="#Updating_Variables">Updating Variables</a></li>
+            <li><a class="nav-link" href="#Comments">Comments</a></li>
+            <li><a class="nav-link" href="#Numbers">Numbers</a></li>
+            <li><a class="nav-link" href="#Multi-line_Strings">Multi-line Stringd</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Overview">
+            <header>Overview</header>
+            <article>
+                <p>Python is a high-level, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical
+                    constructions than other languages.</p>
+                <br/>
+                <p>Python is a clear and powerful object-oriented programming language, comparable to Perl, Ruby, Scheme, or Java. Some of Python's notable features:</p>
+                <ul>
+                    <li>Uses an elegant syntax, making the programs you write easier to read.Python's interactive mode makes it easy to test short snippets of code.</li>
+                    <li>Is an easy-to-use language that makes it simple to get your program working. This makes Python ideal for prototype development and other ad-hoc programming tasks, without compromising maintainability.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Installing_Python">
+            <header>Installing Python</header>
+            <article>
+                <p> See <a href="o http://www.python.org/download/">Download Python</a> for instructions to download and install the correct version of Python.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Hello_World">
+            <header>Hello World</header>
+            <article>
+                To get started with writing Python, open your command prompt on your desktop and write your first "Hello World!" in Python:
+                <code>print("Hello, World!")</code> A print statement is the easiest way to get your Python program to communicate with you.
+            </article>
+        </section>
+        <section class="main-section" id="Strings">
+            <header>Strings</header>
+            <article>
+                <p>Text in Python is considered a specific type of data called a string.A string, so named because they’re a series of letters, numbers, or symbols connected in order — as if threaded together by string. </p>
+                <p>Strings in python are surrounded by either single quotation marks, or double quotation marks. 'hello' is the same as "hello".
+                </p>
+                <p>While double-quotes (“) and single-quotes (‘) are both acceptable ways to define a string, a string needs to be opened and closed by the same type of quote mark.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Multi-line_Strings">
+            <header>Multi-line Strings</header>
+            <article>
+                <p>We have seen how to define a string with single quotes and with double quotes. If we want a string to span multiple lines, we can also use triple quotes:</p>
+                <code>address_string = """136 Whowho Rd
+                    Apt 7
+                    Whosville, WZ 44494"""</code>
+                <p>This address spans multiple lines, and is still contained in one variable, address_string.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Handling_Errors">
+            <header>Handling Errors</header>
+
+            <p>As we get more familiar with the Python programming language, we run into errors and exceptions. These are complaints that Python makes when it doesn’t understand what you want it to do.</p>
+            <p>Everyone runs into these issues, so it is a good habit to read and understand them.</p>
+
+        </section>
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <article>
+                <p>
+                    Python uses variables to define things that are subject to change.Python has no command for declaring a variable. A variable is created the moment you first assign a value to it.
+                </p>
+                <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).Normally, when you create a variable inside a function, that variable is local, and can only be used inside that function. To create
+                    a global variable inside a function, you can use the global keyword.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Updating_Variables">
+            <header>Updating Variables</header>
+            <p>Changing the contents of a variable is one of the essential operations. As the flow of a program progresses, data should be updated to reflect changes that have happened. Updating a variable by adding or subtracting a number to its original
+                value is such a common task that it has its own shorthand to make it faster and easier to read.</p>
+        </section>
+        <section class="main-section" id="Comments">
+            <header>Comments</header>
+            <article>
+                <p>Most of the time, code should be written in such a way that it is easy to understand on its own. However, if you want to include a piece of information to explain a part of your code, you can use the # sign. A line of text preceded by
+                    a # is called a comment.</p>
+                <p> The machine does not run this code — it is only for humans to read. When you look back at your code later, comments may help you figure out what it was intended to do.</p>
+                <code># this variable counts how many rows of the spreadsheet we have:
+                    row_count = 13</code>
+            </article>
+        </section>
+        <section class="main-section" id="Numbers">
+            <header>Numbers</header>
+            <article>
+                <p>Variables can also hold numeric values. The simplest kind of number in Python is the integer, which is a whole number with no decimal point:</p>
+                <code>
+                    int1 = 1
+int2 = 10
+int3 = -5
+                </code>
+                <p>A number with a decimal point is called a float. You can define floats with numbers after the decimal point or by just including a decimal point at the end:</p>
+                <code>float1 = 1.0
+                    float2 = 10.
+                    float3 = -5.5</code>
+                <p>You can also define a float using scientific notation, with e indicating the power of 10:</p>
+                <code># this evaluates to 150:
+                        float4 = 1.5e2</code>
+            </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <ul>
+                    <li>
+                        All the documentation in this page is taken from <a href="https://www.codecademy.com/learn/learn-python">Code Academy </a> and <a href="https://www.w3schools.com/python/">W3 Schools</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
